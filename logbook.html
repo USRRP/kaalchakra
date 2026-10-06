@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaalchakra Hall of Legends</title>
+<meta name="description" content="Kaalchakra CTF 2026 results: 186 crews in the online qualifier, 24 at the NFSU Goa finals. Champions: root@void.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f14">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:image" content="assets/brand/kaalchakra-logo-480.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="logbook" class="page-inner">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="world" aria-hidden="true"></canvas>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="./">
+      <img src="assets/brand/kaalchakra-logo-128.png" width="46" height="46" alt="Kaalchakra CTF logo">
+      <b>Kaalchakra 2.0</b>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./">2.0 home</a></li><li><a href="#results">Champions</a></li><li><a href="#boards-title">Leaderboards</a></li><li><a href="#prizes">Prizes</a></li><li><a href="#sponsors">Sponsors</a></li><li><a href="logbook.html" aria-current="page">Hall of Legends</a></li><li><a href="crew.html">Crew</a></li>
+    </ul>
+    <a class="btn btn-small" data-link="discord" href="#" target="_blank" rel="noopener">Join Discord</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="page-hero archive" aria-labelledby="page-title" data-captain="Welcome to the Hall of Legends. Every crew from 2026 is written here.">
+    <button class="flag-egg" data-flag="logbook-hero" style="right:8%;top:130px"></button>
+    <span class="candle" aria-hidden="true"></span>
+    <div class="wrap">
+      <span class="kicker">Kaalchakra 1.0 · 28 March to 11 April 2026</span>
+      <h1 class="title" id="page-title">Hall of Legends</h1>
+      <p class="lead">The first voyage: a 24-hour online qualifier, then the offline finals at NFSU Goa. Here's every crew, every score, and what they won.</p>
+      <div class="stats" data-perch>
+        <div class="stat"><b>186</b><span>crews on the qualifier scoreboard</span></div>
+        <div class="stat"><b>24</b><span>crews at the Goa finals</span></div>
+        <div class="stat"><b>24 h</b><span>online qualifier</span></div>
+        <div class="stat"><b>₹2,00,000</b><span>cash to the top three</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section clear rope-top" id="results" aria-labelledby="results-title" data-captain="root@void climbed from 4th in the qualifier to champions. Remember the name.">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Finals · 11 April 2026 · NFSU Goa</span>
+        <h2 class="title section-title" id="results-title">The champions</h2>
+      </div>
+      <div class="podium" id="podium"></div>
+      <div class="podium-base" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="section rope-top" aria-labelledby="boards-title" data-captain="Search for your crew in the qualifier board. Finalists are marked.">
+    <button class="flag-egg" data-flag="logbook-boards" style="left:2%;top:40px"></button>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Scores as published on CTFtime</span>
+        <h2 class="title section-title" id="boards-title">Leaderboards</h2>
+      </div>
+      <div class="board-wrap">
+        <div class="board-panel" data-perch>
+          <header><h3>Finals</h3><p>24 crews, offline. The middle column shows each crew's qualifier rank and how far it moved.</p></header>
+          <div class="table-scroll"><table class="board">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Crew</th><th scope="col" class="num">Qualifier</th><th scope="col" class="num">Points</th></tr></thead>
+            <tbody id="finals-body"></tbody></table></div>
+        </div>
+        <div class="board-panel" data-perch>
+          <header><h3>Online qualifier</h3><p>186 crews, 28–29 March 2026.</p></header>
+          <div class="board-tools"><label class="visually-hidden" for="quals-search">Find a crew</label><input id="quals-search" type="search" placeholder="Find your crew" autocomplete="off"><span id="quals-count"></span></div>
+          <div class="table-scroll"><table class="board">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Crew</th><th scope="col" class="num">Points</th></tr></thead>
+            <tbody id="quals-body"></tbody></table></div>
+          <div class="more-row"><button class="btn btn-small btn-wood" id="quals-more" type="button">Show all crews</button></div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:18px">Source: CTFtime <a data-link="ctftimeQuals2026" href="#" target="_blank" rel="noopener">qualifier</a> and <a data-link="ctftimeFinals2026" href="#" target="_blank" rel="noopener">finals</a>.</p>
+    </div>
+  </section>
+
+  <section class="section clear rope-top" id="format" aria-labelledby="format-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">How it ran</span>
+        <h2 class="title section-title" id="format-title">Two rounds</h2>
+      </div>
+      <div class="rounds">
+        <div class="panel" data-perch><span class="kicker">Round one</span><h3>Online qualifier</h3>
+          <dl><dt>Date</dt><dd>28 March 2026, from 2:30 PM IST</dd><dt>Length</dt><dd>24 hours</dd><dt>Format</dt><dd>Jeopardy</dd><dt>Where</dt><dd>Online</dd><dt>Crews</dt><dd>186 on the scoreboard</dd></dl></div>
+        <div class="panel" data-perch><span class="kicker">Round two</span><h3>Offline finals</h3>
+          <dl><dt>Date</dt><dd>11 April 2026</dd><dt>Length</dt><dd>One day</dd><dt>Format</dt><dd>Jeopardy</dd><dt>Where</dt><dd>NFSU Goa campus</dd><dt>Crews</dt><dd>24, invited after write-up verification</dd></dl></div>
+      </div>
+      <ul class="tags" id="cats-2026" aria-label="2026 categories"></ul>
+    </div>
+  </section>
+
+  <section class="section rope-top" id="prizes" aria-labelledby="prizes-title" data-captain="Look at that loot! Cash, certifications, licences and vouchers.">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">The 2026 bounty</span>
+        <h2 class="title section-title" id="prizes-title">Prizes</h2>
+        <p class="lead">₹2,00,000 in cash for the top three, plus certifications, licences and vouchers from our partners. Cash prizes were subject to TDS.</p>
+      </div>
+      <div class="prize-grid" id="prize-cards"></div>
+      <div class="prize-rest" id="prizes-rest"></div>
+    </div>
+  </section>
+
+  <section class="section clear rope-top" id="sponsors" aria-labelledby="sponsors-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">With thanks</span>
+        <h2 class="title section-title" id="sponsors-title">2026 sponsors and partners</h2>
+      </div>
+      <div class="tiers" id="tiers"></div>
+      <p style="margin-top:34px"><a class="btn" href="crew.html">Meet the crew</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <div class="foot-brand">
+        <picture><source srcset="assets/brand/kaalchakra-logo-256.webp" type="image/webp"><img src="assets/brand/kaalchakra-logo-256.png" width="92" height="92" alt="Kaalchakra CTF logo" loading="lazy"></picture>
+        <h2 class="title">Kaalchakra 2.0</h2>
+      </div>
+      <p>A national CTF by National Forensic Sciences University, Goa Campus, and TH3_RANG3RS.</p>
+      <p>Captain Kaal, his rivals and the ship Kaalnaav are original characters made for Kaalchakra.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="./">Kaalchakra 2.0</a></li><li><a href="logbook.html">Hall of Legends (2026)</a></li><li><a href="crew.html">The crew</a></li></ul>
+    </div>
+    <div>
+      <h3>Follow the ship</h3>
+      <ul>
+        <li><a data-link="discord" href="#" target="_blank" rel="noopener">Discord</a></li>
+        <li><a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a data-link="x" href="#" target="_blank" rel="noopener">X</a></li>
+        <li><a data-link="ctftime" href="#" target="_blank" rel="noopener">CTFtime</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/js/core/world-state.js"></script>
+<script src="assets/js/core/audio.js"></script>
+<script src="assets/js/world/textures.js"></script>
+<script src="assets/js/world/ship.js"></script>
+<script src="assets/js/world/environment.js"></script>
+<script src="assets/js/characters/rig.js"></script>
+<script src="assets/js/characters/poses.js"></script>
+<script src="assets/js/characters/roster.js"></script>
+<script src="assets/js/stage/movement.js"></script>
+<script src="assets/js/stage/stage.js"></script>
+<script src="assets/js/stage/events.js"></script>
+<script src="assets/js/stage/interaction.js"></script>
+<script src="assets/js/ui/hud.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

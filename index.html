@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaalchakra 2.0</title>
+<meta name="description" content="Kaalchakra 2.0: a national CTF for Indian college students by NFSU Goa and TH3_RANG3RS. Online qualifier, offline finals at NFSU Goa.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f14">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:image" content="assets/brand/kaalchakra-logo-480.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="world" aria-hidden="true"></canvas>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="./">
+      <img src="assets/brand/kaalchakra-logo-128.png" width="46" height="46" alt="Kaalchakra CTF logo">
+      <b>Kaalchakra 2.0</b>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#legend">Legend</a></li><li><a href="#seas">Categories</a></li><li><a href="#route">Format</a></li><li><a href="#bounty">Prizes</a></li><li><a href="#faq">FAQ</a></li><li><a href="logbook.html">Hall of Legends</a></li><li><a href="crew.html">Crew</a></li>
+    </ul>
+    <a class="btn btn-small" data-link="discord" href="#" target="_blank" rel="noopener">Join Discord</a>
+  </nav>
+</header>
+<main id="main">
+  <!-- HERO: the ship at sunset, the original logo, the call to sign on -->
+  <section class="hero" aria-labelledby="hero-title" data-captain="Welcome aboard the Kaalnaav. The wheel of time has turned again, and the flags are out there.">
+    <button class="flag-egg" data-flag="hero" style="right:7%;top:24%"></button>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="logo-wrap">
+          <picture>
+            <source type="image/webp" srcset="assets/brand/kaalchakra-logo-480.webp 480w, assets/brand/kaalchakra-logo.webp 963w" sizes="(max-width: 700px) 150px, 260px">
+            <img class="logo" src="assets/brand/kaalchakra-logo-480.png" srcset="assets/brand/kaalchakra-logo-480.png 480w, assets/brand/kaalchakra-logo.png 963w" sizes="(max-width: 700px) 150px, 260px" width="260" height="260" alt="Kaalchakra CTF logo" fetchpriority="high">
+          </picture>
+          <div class="hero-title">
+            <h1 class="title" id="hero-title">Kaalchakra <span class="ver">2.0</span></h1>
+            <p>National CTF · NFSU Goa × TH3_RANG3RS</p>
+          </div>
+        </div>
+        <span class="sign" id="status-sign"><i></i>Registrations open soon</span>
+        <div class="glass hero-card" data-perch>
+          <p>The wheel of time has turned again. Gather a crew of up to three, survive a 24-hour online qualifier, and sail to NFSU Goa for the finals.</p>
+          <ul class="chips" aria-label="Event facts">
+            <li><b>Online</b> qualifier · 24h</li>
+            <li><b>Offline</b> finals · NFSU Goa</li>
+            <li><b>Crew</b> 1–3 pirates</li>
+            <li><b>Dates</b> <span id="chip-date">announced soon</span></li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" id="register-btn" data-link="discord" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M5 5h12l-3 4 3 4H5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg> Get registration alerts</a>
+          <a class="btn btn-wood" href="logbook.html">Hall of Legends</a>
+        </div>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#legend">Scroll to sail</a>
+  </section>
+
+  <!-- LEGEND -->
+  <section class="section clear rope-top" id="legend" aria-labelledby="legend-title" data-captain="186 crews hunted this wheel last season. Only one took it home: root@void.">
+    <button class="flag-egg" data-flag="legend" style="left:3%;bottom:14%"></button>
+    <div class="wrap legend">
+      <div class="legend-text">
+        <span class="kicker">The legend</span>
+        <h2 class="title section-title" id="legend-title">The wheel has turned again</h2>
+        <p>Sailors say the Kaalchakra was carved from a single banyan and bound in brass. Turn it and your ship doesn't change course. It changes <strong>hour</strong>.</p>
+        <p>Last season <strong>186 crews</strong> went after it. <strong>24</strong> reached Goa. One crew, <strong>root@void</strong>, brought it home. Now the wheel has spun once more and scattered its flags across eight seas.</p>
+        <p>Captain Kaal is recruiting, and he isn't the only pirate after those flags. Click him if you have questions, or open the doubloon counter in the bottom-left corner and press <b>Talk to the captain</b>.</p>
+      </div>
+      <div class="panel log-note" data-perch>
+        <span class="kicker">From the ship's log, the Kaalnaav</span>
+        <p>The flags lie where the wheel stopped turning: in harbours of broken websites, behind ciphers older than this ship, inside wrecks that still keep their secrets. Bring a sharp crew and a fast terminal.</p>
+        <p class="sign-off">Captain Kaal</p>
+        <span class="seal" aria-hidden="true">KC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section rope-top" id="seas" aria-labelledby="seas-title" data-captain="Eight seas, eight kinds of trouble. Pick one and I'll tell you about it.">
+    <button class="flag-egg" data-flag="seas" style="right:4%;top:60px"></button>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Choose your sea</span>
+        <h2 class="title section-title" id="seas-title">Eight challenge categories</h2>
+        <p class="lead">Each spoke of the wheel points to a different sea. Pick one to hear what the captain thinks of it.</p>
+      </div>
+      <div class="levels" id="levels"></div>
+    </div>
+  </section>
+
+  <!-- FORMAT -->
+  <section class="section clear rope-top" id="route" aria-labelledby="route-title" data-captain="Qualifier online, finals in Goa. Four stops between you and the treasure.">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">The voyage</span>
+        <h2 class="title section-title" id="route-title">The map to Goa</h2>
+        <p class="lead">Four stops from signing up to the finals. Dates for each will be posted here and on Discord.</p>
+      </div>
+      <div class="panel map" data-perch>
+        <button class="flag-egg" data-flag="map" style="left:46%;top:18px"></button>
+        <svg class="map-art" viewBox="0 0 1000 230" role="img" aria-label="Treasure map: four islands joined by a dotted route, ending at an X in Goa">
+          <path d="M70 150 C 200 40, 280 210, 380 120 S 560 40, 640 130 S 820 210, 920 95" fill="none" stroke="#7a3a12" stroke-width="4" stroke-dasharray="3 12" stroke-linecap="round"/>
+          <g stroke="#3a2410" stroke-width="2.5" fill="none" opacity=".85">
+            <path d="M14 162c10-22 40-34 64-30 24-2 46 10 48 26 2 14-26 26-58 26S8 178 14 162z" fill="rgba(122,82,40,.16)"/><path d="M40 156c8-8 22-12 34-10s22 8 20 14" />
+            <path d="M318 132c6-24 46-36 74-30 30 4 54 16 52 34-2 18-34 26-64 24s-66-10-62-28z" fill="rgba(122,82,40,.16)"/><path d="M352 124c10-8 26-10 40-6s20 10 18 16"/>
+            <path d="M586 144c8-22 40-30 62-26 26 4 46 14 44 28-2 14-28 22-56 20s-54-6-50-22z" fill="rgba(122,82,40,.16)"/><path d="M612 138c8-7 20-10 32-7s16 8 14 13"/>
+            <path d="M852 112c8-26 50-40 80-34 32 6 56 20 54 38-2 18-34 30-68 28s-72-12-66-32z" fill="rgba(122,82,40,.16)"/><path d="M886 104c10-9 28-12 44-7s22 12 20 18"/>
+          </g>
+          <path d="M904 84l34 34M938 84l-34 34" stroke="#8a1f19" stroke-width="8" stroke-linecap="round"/>
+          <g transform="translate(500 62)" stroke="#3a2410" stroke-width="2" fill="none"><circle r="32"/><circle r="26" stroke-dasharray="2 4"/><path d="M0-30L7 0 0 30-7 0z" fill="#8a1f19"/><path d="M-30 0L0 6 30 0 0-6z" fill="rgba(58,36,16,.35)"/></g>
+          <text class="lbl" x="500" y="20" text-anchor="middle">N</text>
+          <text class="lbl" x="70" y="215" text-anchor="middle">I</text><text class="lbl" x="380" y="190" text-anchor="middle">II</text><text class="lbl" x="640" y="200" text-anchor="middle">III</text><text class="lbl" x="920" y="175" text-anchor="middle">IV</text>
+        </svg>
+        <ol class="stops">
+          <li><h3>Sign the articles</h3><p class="when">Registration · dates soon</p><p>Register a crew of one to three, pay the entry fee and join the Discord, where every announcement goes.</p></li>
+          <li><h3>The open sea</h3><p class="when">Online qualifier · 24 hours</p><p>A Jeopardy-style CTF you play from anywhere. The highest-scoring crews get shortlisted.</p></li>
+          <li><h3>Prove your passage</h3><p class="when">Write-ups · within 8 hours</p><p>Shortlisted crews send write-ups. If a crew can't be verified, the next crew on the scoreboard is invited.</p></li>
+          <li><h3>Make landfall</h3><p class="when">Offline finals · NFSU Goa</p><p>One day of Jeopardy on campus with a live scoreboard. The top three crews take the treasure.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREASURE -->
+  <section class="section rope-top" id="bounty" aria-labelledby="bounty-title" data-captain="Treasure! The 2.0 bounty will be announced with our sponsors.">
+    <div class="wrap treasure">
+      <svg class="chest-art" viewBox="0 0 320 260" role="img" aria-label="An open treasure chest full of gold coins. Click it and the captain goes hunting.">
+        <defs>
+          <linearGradient id="chw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3f1e"/><stop offset="1" stop-color="#3a200d"/></linearGradient>
+          <linearGradient id="chb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7a5a22"/><stop offset=".5" stop-color="#e2c27a"/><stop offset="1" stop-color="#7a5a22"/></linearGradient>
+          <radialGradient id="chg" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffe7a0"/><stop offset=".6" stop-color="#d9a63a"/><stop offset="1" stop-color="#8a5f18"/></radialGradient>
+        </defs>
+        <ellipse cx="160" cy="236" rx="140" ry="16" fill="#000" opacity=".35"/>
+        <g stroke="#1e1007" stroke-width="3" stroke-linejoin="round">
+          <rect x="40" y="140" width="240" height="96" rx="6" fill="url(#chw)"/>
+          <path d="M44 172h232M44 204h232" stroke="#2a160a" stroke-width="2" opacity=".6"/>
+          <rect x="78" y="140" width="20" height="96" fill="url(#chb)"/><rect x="222" y="140" width="20" height="96" fill="url(#chb)"/>
+          <circle cx="128" cy="140" r="13" fill="url(#chg)"/><circle cx="156" cy="131" r="14" fill="url(#chg)"/><circle cx="186" cy="138" r="13" fill="url(#chg)"/><circle cx="108" cy="146" r="11" fill="url(#chg)"/><circle cx="210" cy="146" r="11" fill="url(#chg)"/>
+          <rect x="147" y="166" width="26" height="30" rx="4" fill="url(#chb)"/><circle cx="160" cy="178" r="3.5" fill="#1e1007"/>
+          <g class="lid"><path d="M40 140 V110 Q160 52 280 110 V140 Z" fill="url(#chw)"/><path d="M78 140V96 M242 140V96" stroke="#c9a24a" stroke-width="16"/><path d="M78 140V96 M242 140V96" stroke="#1e1007" stroke-width="2" opacity=".5"/></g>
+        </g>
+        <g fill="#fff3c4" opacity=".85"><path d="M60 70l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M262 52l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/></g>
+      </svg>
+      <div>
+        <span class="kicker">The bounty</span>
+        <h2 class="title section-title" id="bounty-title">Treasure for the top crews</h2>
+        <p class="lead" style="margin-top:12px">The 2.0 prize pool will be announced with our sponsors. For reference, here's what the top three crews took home in 2026:</p>
+        <div class="loot" data-perch>
+          <div><b class="rs">₹1,10,000</b><span>1st place cash, part of a ₹6,00,000+ package</span></div>
+          <div><b class="rs">₹60,000</b><span>2nd place cash</span></div>
+          <div><b class="rs">₹30,000</b><span>3rd place cash</span></div>
+        </div>
+        <div class="hero-actions" style="margin-top:26px">
+          <a class="btn btn-ghost" id="sponsor-btn" href="#" target="_blank" rel="noopener">Sponsor the voyage</a>
+          <a class="btn btn-wood" href="logbook.html#prizes">See all 2026 prizes</a>
+        </div>
+        <p class="lead" id="sponsor-address" hidden style="margin-top:12px"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGENDS TEASER -->
+  <section class="section clear rope-top" id="legends" aria-labelledby="legends-title" data-captain="Want to see last year's full leaderboard? The Hall of Legends has all 186 crews.">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Season one · 2026</span>
+        <h2 class="title section-title" id="legends-title">Hall of Legends</h2>
+        <p class="lead">root@void finished 4th in the qualifier and won the finals by 100 points.</p>
+      </div>
+      <div class="podium">
+        <div class="step second"><span class="medal">2</span><span class="team">Cryptonite</span><span class="pts">7,550 pts</span><div class="block" aria-hidden="true" data-solid>2</div></div>
+        <div class="step first"><span class="medal">1</span><span class="team">root@void</span><span class="pts">7,650 pts</span><div class="block" aria-hidden="true" data-solid>1</div></div>
+        <div class="step third"><span class="medal">3</span><span class="team">ISFCR PESU</span><span class="pts">7,350 pts</span><div class="block" aria-hidden="true" data-solid>3</div></div>
+      </div>
+      <div class="podium-base" aria-hidden="true"></div>
+      <div class="stats" style="margin-top:36px" data-perch>
+        <div class="stat"><b>186</b><span>crews in the online qualifier</span></div>
+        <div class="stat"><b>24</b><span>crews at the Goa finals</span></div>
+        <div class="stat"><b>₹2,00,000</b><span>cash shared by the top three</span></div>
+        <div class="stat"><b>7</b><span>categories in 2026</span></div>
+      </div>
+      <p style="margin-top:28px"><a class="btn btn-wood" href="logbook.html">Open the full leaderboard</a></p>
+    </div>
+  </section>
+
+  <!-- PIRATE CODE -->
+  <section class="section rope-top" id="rules" aria-labelledby="rules-title" data-captain="The Pirate Code: no sharing flags, no attacking the scoreboard. I'll be watching.">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Read before you sail</span>
+        <h2 class="title section-title" id="rules-title">The Pirate Code</h2>
+      </div>
+      <div class="panel" data-perch>
+        <ol class="code-list">
+          <li>Open to UG and PG students enrolled at recognised Indian institutions. Every member needs a valid college ID.</li>
+          <li>Crews of one to three. Each person sails with one crew only, and members can't be swapped after registration.</li>
+          <li>No sharing of flags or solutions between crews. Everyone involved walks the plank (gets disqualified).</li>
+          <li>Attack the challenges, never the infrastructure: no DoS, no attacks on the scoreboard, and no brute-forcing or scanners unless a challenge asks for it.</li>
+          <li>Flags look like <code>Kaal{s0m3_t3xt_h3r3}</code> unless a challenge says otherwise.</li>
+          <li>Finalists arrange their own travel and stay. Cash prizes are subject to TDS. The organisers' decision on disputes is final.</li>
+        </ol>
+        <p class="small-note">These are the 2026 rules carried forward. The final 2.0 rules will be published when registration opens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section clear rope-top" id="faq" aria-labelledby="faq-title" data-captain="Got questions? Open one and I'll answer it myself.">
+    <button class="flag-egg" data-flag="faq" style="right:6%;bottom:40px"></button>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Ask the captain</span>
+        <h2 class="title section-title" id="faq-title">Questions</h2>
+        <p class="lead">Open a question and Captain Kaal will answer it himself.</p>
+      </div>
+      <div class="faq" id="faq-list" data-perch></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <div class="foot-brand">
+        <picture><source srcset="assets/brand/kaalchakra-logo-256.webp" type="image/webp"><img src="assets/brand/kaalchakra-logo-256.png" width="92" height="92" alt="Kaalchakra CTF logo" loading="lazy"></picture>
+        <h2 class="title">Kaalchakra 2.0</h2>
+      </div>
+      <p>A national CTF by National Forensic Sciences University, Goa Campus, and TH3_RANG3RS.</p>
+      <p>Captain Kaal, his rivals and the ship Kaalnaav are original characters made for Kaalchakra.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="./">Kaalchakra 2.0</a></li><li><a href="logbook.html">Hall of Legends (2026)</a></li><li><a href="crew.html">The crew</a></li></ul>
+    </div>
+    <div>
+      <h3>Follow the ship</h3>
+      <ul>
+        <li><a data-link="discord" href="#" target="_blank" rel="noopener">Discord</a></li>
+        <li><a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a data-link="x" href="#" target="_blank" rel="noopener">X</a></li>
+        <li><a data-link="ctftime" href="#" target="_blank" rel="noopener">CTFtime</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/js/core/world-state.js"></script>
+<script src="assets/js/core/audio.js"></script>
+<script src="assets/js/world/textures.js"></script>
+<script src="assets/js/world/ship.js"></script>
+<script src="assets/js/world/environment.js"></script>
+<script src="assets/js/characters/rig.js"></script>
+<script src="assets/js/characters/poses.js"></script>
+<script src="assets/js/characters/roster.js"></script>
+<script src="assets/js/stage/movement.js"></script>
+<script src="assets/js/stage/stage.js"></script>
+<script src="assets/js/stage/events.js"></script>
+<script src="assets/js/stage/interaction.js"></script>
+<script src="assets/js/ui/hud.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

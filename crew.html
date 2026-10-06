@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaalchakra Crew</title>
+<meta name="description" content="The faculty, core crew and organisers behind Kaalchakra 2.0 at NFSU Goa.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f14">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:image" content="assets/brand/kaalchakra-logo-480.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="crew" class="page-inner">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="world" aria-hidden="true"></canvas>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="./">
+      <img src="assets/brand/kaalchakra-logo-128.png" width="46" height="46" alt="Kaalchakra CTF logo">
+      <b>Kaalchakra 2.0</b>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./">2.0 home</a></li><li><a href="#faculty-title">Faculty</a></li><li><a href="#core-title">Core crew</a></li><li><a href="#new-title">Organisers</a></li><li><a href="logbook.html">Hall of Legends</a></li><li><a href="crew.html" aria-current="page">Crew</a></li>
+    </ul>
+    <a class="btn btn-small" data-link="discord" href="#" target="_blank" rel="noopener">Join Discord</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title" data-captain="This is the ship's registry. Faculty, the core four, and eight new hands joining for 2.0.">
+    <div class="wrap">
+      <span class="kicker">The ship's registry</span>
+      <h1 class="title" id="page-title">The crew</h1>
+      <p class="lead">Kaalchakra is run by National Forensic Sciences University, Goa Campus, and TH3_RANG3RS. The faculty and core crew from 1.0 return for 2.0, joined by eight new organisers.</p>
+    </div>
+  </section>
+  <section class="section clear rope-top" aria-labelledby="faculty-title">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">NFSU Goa Campus</span><h2 class="title section-title" id="faculty-title">Patrons and faculty</h2></div>
+      <div class="registry"><div class="registry"><div class="roster" id="faculty"></div></div></div>
+    </div>
+  </section>
+  <section class="section rope-top" aria-labelledby="core-title" data-captain="The core four built Kaalchakra 1.0. They're steering 2.0 as well.">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">TH3_RANG3RS</span><h2 class="title section-title" id="core-title">Core crew</h2><p class="lead">The four who built and ran Kaalchakra 1.0, and are steering 2.0.</p></div>
+      <div class="registry"><div class="roster" id="core"></div></div>
+    </div>
+  </section>
+  <section class="section clear rope-top" aria-labelledby="new-title" data-captain="Eight new crew members are coming aboard. Their names go up soon.">
+    <button class="flag-egg" data-flag="crew" style="right:5%;top:50px"></button>
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">New hands on deck</span><h2 class="title section-title" id="new-title">Organising crew</h2><p class="lead">Eight new organisers join for 2.0. Their profiles will be added here soon.</p></div>
+      <div class="registry"><div class="roster" id="newcrew"></div></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <div class="foot-brand">
+        <picture><source srcset="assets/brand/kaalchakra-logo-256.webp" type="image/webp"><img src="assets/brand/kaalchakra-logo-256.png" width="92" height="92" alt="Kaalchakra CTF logo" loading="lazy"></picture>
+        <h2 class="title">Kaalchakra 2.0</h2>
+      </div>
+      <p>A national CTF by National Forensic Sciences University, Goa Campus, and TH3_RANG3RS.</p>
+      <p>Captain Kaal, his rivals and the ship Kaalnaav are original characters made for Kaalchakra.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="./">Kaalchakra 2.0</a></li><li><a href="logbook.html">Hall of Legends (2026)</a></li><li><a href="crew.html">The crew</a></li></ul>
+    </div>
+    <div>
+      <h3>Follow the ship</h3>
+      <ul>
+        <li><a data-link="discord" href="#" target="_blank" rel="noopener">Discord</a></li>
+        <li><a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a data-link="x" href="#" target="_blank" rel="noopener">X</a></li>
+        <li><a data-link="ctftime" href="#" target="_blank" rel="noopener">CTFtime</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/js/core/world-state.js"></script>
+<script src="assets/js/core/audio.js"></script>
+<script src="assets/js/world/textures.js"></script>
+<script src="assets/js/world/ship.js"></script>
+<script src="assets/js/world/environment.js"></script>
+<script src="assets/js/characters/rig.js"></script>
+<script src="assets/js/characters/poses.js"></script>
+<script src="assets/js/characters/roster.js"></script>
+<script src="assets/js/stage/movement.js"></script>
+<script src="assets/js/stage/stage.js"></script>
+<script src="assets/js/stage/events.js"></script>
+<script src="assets/js/stage/interaction.js"></script>
+<script src="assets/js/ui/hud.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
